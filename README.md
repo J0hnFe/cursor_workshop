@@ -23,7 +23,65 @@ Optional but useful: **[ESLint](https://eslint.org/)** is configured for code qu
 ## Prerequisites
 
 - **Node.js** — LTS version recommended (e.g. 20.x or 22.x). [Download](https://nodejs.org/)
+- **Git** — for cloning and version control. Windows attendees often need [Git for Windows](https://git-scm.com/download/win); macOS and Linux usually include it or ship it with developer tools.
 - **npm** — ships with Node (this repo uses `npm` and `package-lock.json`).
+
+### Check installs (copy-paste for assistants)
+
+1. **Clone** this repository.
+2. Open a terminal and **`cd`** into the **project root** (the folder that contains `package.json`).
+3. Run the command for **your** operating system below.
+
+#### macOS
+
+Use **Terminal** (or any shell where `bash` is available).
+
+Check only (prints what is missing):
+
+```bash
+bash scripts/check-setup.sh
+```
+
+Try to install missing tools with **Homebrew** when `brew` is available (optional):
+
+```bash
+bash scripts/check-setup.sh --install
+```
+
+#### Linux
+
+Use your normal terminal (or **WSL** if that is where you develop).
+
+Check only:
+
+```bash
+bash scripts/check-setup.sh
+```
+
+Same with `--install` (optional): the script **does not** run `apt`, `dnf`, or `sudo` for you—it only prints distro-appropriate hints.
+
+```bash
+bash scripts/check-setup.sh --install
+```
+
+#### Windows
+
+The script must run under **bash**. Use **one** of these environments (plain **Command Prompt** or **PowerShell** will **not** work unless you are inside **WSL**):
+
+- **Git Bash** — install [Git for Windows](https://git-scm.com/download/win), open **Git Bash** from the Start menu, then `cd` to the project (paths look like `/c/Users/you/.../cursor_workshop`).
+- **WSL** — open your Linux distro, `cd` to the repo (often `/mnt/c/Users/you/.../cursor_workshop`).
+
+Check only:
+
+```bash
+bash scripts/check-setup.sh
+```
+
+Try **winget** for missing **Node** or **Git** (optional; may ask for elevation; open a **new** terminal afterward):
+
+```bash
+bash scripts/check-setup.sh --install
+```
 
 ## Getting started
 
