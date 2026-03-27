@@ -4,9 +4,15 @@ Use this page when you need to **check** or help **fix** attendees’ **Node.js*
 
 ## Before you run anything
 
-1. **Clone** this repository (or use an attendee’s clone).
-2. Open a terminal and **`cd`** into the **project root** (the folder that contains `package.json`).
-3. Run the commands below for **the attendee’s** operating system.
+1. **Fork on the attendee’s GitHub account.** While signed in as the **attendee**, open this workshop repo on GitHub and use **Fork** so a copy exists under **their** username (or org). They need their **own** fork to **push** changes and to **publish on Vercel**, which imports a GitHub repo from the account you connect. If they only **clone** the original upstream repo and never fork, they usually **cannot push** to that remote and **Vercel** will not be set up against a repo they control the way the workshop expects.
+
+2. **Clone the fork**, not the upstream repo. Example (replace the owner with their GitHub username and the repo name if they renamed the fork):  
+   `git clone https://github.com/THEIR_USERNAME/cursor_workshop.git`  
+   Facilitators can also work from a machine that already has that attendee’s fork checked out.
+
+3. Open a terminal and **`cd`** into the **project root** (the folder that contains `package.json`).
+
+4. Run the commands below for **the attendee’s** operating system.
 
 ### macOS
 
